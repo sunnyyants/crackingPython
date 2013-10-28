@@ -6,11 +6,13 @@ __author__ = 'SunnyYan'
 def rotatematrix(array,n):
     layer = 0
     while(layer < n):
+    #for layer in range(0,n):
         layer =+ 1
         first = layer;
         last = n - 1 - layer
         i = first
         while(i < last):
+        #for i in range(first,last):
             i =+ 1
             offset = i -first
 

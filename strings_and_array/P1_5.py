@@ -8,9 +8,8 @@ __author__ = 'SunnyYan'
 def compressString(string):
     result = []
     last = string[0]
-    i = 1
     counter = 1
-    while(i < len(string)):
+    for i in range(1,len(string)):
         if(string[i] == last):
             counter += 1
         else:
@@ -18,7 +17,6 @@ def compressString(string):
             result.append(str(counter))
             counter = 1
             last = string[i]
-        i += 1
     compressed = ''.join(result)
     return ((len(compressed) < len(string)) and compressed or string)
 

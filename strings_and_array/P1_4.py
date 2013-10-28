@@ -11,21 +11,16 @@ __author__ = 'SunnyYan'
 
 def replacethespace(string):
     l = string.split()
-    print len(l)
-    i = 1
-    lenth = len(l) * 2 - 1
-    while(i < lenth):
-        l.insert(i,"%20")
-        i += 2
+    length = len(l) * 2 - 1
+    for i in range(1, length, 2):
+        l.insert(i, "%20")
     return ''.join(l)
 
 
 testing = "Mr John Smith"
 testing2 = "Hello everyone I am Sunny Yan"
-print testing.split()
-abc = testing.split()
-print ''.join(testing.split())
-print abc
-print ''.join(abc)
+print testing
 print replacethespace(testing)
+print testing2
 print replacethespace(testing2)
+

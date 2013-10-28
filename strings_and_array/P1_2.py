@@ -17,7 +17,7 @@ def method3(strings):
     while(i >= 0):
         result.append(strings[i])
         i -= 1
-    return result
+    return ''.join(result)
 
 print method1("abcdefg")
 print method2("1234567")

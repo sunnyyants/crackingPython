@@ -8,16 +8,13 @@ def findPermutation(a,b):
     if len(a) != len(b):
         return False
     letter = [0]*95
-    i = 0
-    while(i < len(a)):
+    for i in range(0,len(a)):
         letter[ord(a[i])-32] += 1
-        i += 1
-    j = 0
-    while(j < len(b)):
+
+    for j in range(0,len(b)):
         letter[ord(b[j])-32] -= 1
         if letter[ord(b[j])-32] < 0:
             return False
-        j += 1
 
     return True
 
