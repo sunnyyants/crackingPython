@@ -25,8 +25,6 @@ class arrayStacks:
         else: return False
 
     def indexComputation(self, stacknum):
-        index = 0
-        #dict = {'1': (stacknum) * 100 - self.stack[stacknum - 1] }
         dict = {'1':100 - self.stacks[0], '2':200 - self.stacks[1], '3':300 - self.stacks[2]};
         index = dict[str(stacknum)]
         return index
@@ -55,9 +53,8 @@ class arrayStacks:
     def printStack(self, stacknum):
         list = []
         dict = {'1':100-self.stacks[0],'2':200-self.stacks[1],'3':300-self.stacks[2]}
-        dict2 = {'1':100, '2':200, '3':300}
         index = dict[(str)(stacknum)]
-        for i in range(index,dict2[(str)(stacknum)]):
+        for i in range(index, self.dict[(str)(stacknum)]):
             list.append(self.array[i])
         return (str)(list)
 
