@@ -2,7 +2,7 @@ __author__ = 'SunnyYan'
 # Implement an algorithm to delete a node in the middle of a
 # single linked list, given only access to that node.
 
-from SingleLinkedList import SLinkedList
+from Linked_List.SingleLinkedList import SLinkedList
 
 def deletemiddleNode(node):
     while(node.next != None):

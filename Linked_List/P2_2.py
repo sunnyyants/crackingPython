@@ -2,7 +2,7 @@ __author__ = 'SunnyYan'
 # Implement an algorithm to find the kth to the last element of single
 # Linked List
 
-from SingleLinkedList import SLinkedList
+from Linked_List.SingleLinkedList import SLinkedList
 def findtheNthtoLast(head, count, num):
     if(head is None):
         return head

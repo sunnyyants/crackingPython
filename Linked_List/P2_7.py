@@ -2,7 +2,7 @@ __author__ = 'SunnyYan'
 
 # Implement a function to check if a linked list is a palindrome
 
-from SingleLinkedList import SLinkedList
+from Linked_List.SingleLinkedList import SLinkedList
 
 def checkpalindrome(list):
     length = list.size

@@ -3,8 +3,8 @@ __author__ = 'SunnyYan'
 # Given a circular linked list, implement algorithm which return the node
 # at the beginning of the loop
 
-from SingleLinkedList import SLinkedList
-from SingleLinkedList import SNode
+from Linked_List.SingleLinkedList import SLinkedList
+
 
 def findtheLoopStart(list):
     slow = list.head.next

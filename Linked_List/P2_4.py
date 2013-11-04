@@ -3,7 +3,7 @@ __author__ = 'SunnyYan'
 # Write code to partition a linked list around a value x, such that all node
 # less than x come before all nodes greater or equal to x
 
-from SingleLinkedList import SLinkedList
+from Linked_List.SingleLinkedList import SLinkedList
 
 def partition(LIST, value):
     lessBegin = SLinkedList()

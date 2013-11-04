@@ -5,8 +5,8 @@ __author__ = 'SunnyYan'
 # sat the head of the list. Write a function that adds the two numbers and returns
 # the sum as a linked list.
 
-from SingleLinkedList import SLinkedList
-from SingleLinkedList import SNode
+from Linked_List.SingleLinkedList import SLinkedList
+from Linked_List.SingleLinkedList import SNode
 
 def addList(listnode1, listnode2, carry):
     if(listnode1 == None and listnode2 == None and carry == 0):

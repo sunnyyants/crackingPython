@@ -96,6 +96,12 @@ class DList:
                 return
             currentNode = currentNode.next
 
+    def poll(self):
+        currentNode = self.head.next
+        self.head.next.next.prev = self.head
+        self.head.next = self.head.next.next
+        self.size -= 1
+        return currentNode
 
 # testing the linked list
 #

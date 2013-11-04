@@ -3,7 +3,7 @@ __author__ = 'SunnyYan'
 # Follow up
 # How would you solve this problem if a temporary buffer is not allowed
 
-from SingleLinkedList import SLinkedList
+from Linked_List.SingleLinkedList import SLinkedList
 
 
 def findDuplicates(List):
