@@ -28,10 +28,12 @@ class Stack:
         self.size = 0
 
     def pop(self):
-        node = self.top
-        self.top = self.top.next
-        self.size -= 1
-        return node.item
+        if(self.size > 0):
+            node = self.top
+            self.top = self.top.next
+            self.size -= 1
+            return node.item
+        else: return None
 
     def push(self,item):
         node = Node(self.top,item)
@@ -40,6 +42,9 @@ class Stack:
 
     def isEmpty(self):
         return self.size is 0
+
+    def peek(self):
+        return self.top.item
 
     def printStack(self):
         node = self.top
