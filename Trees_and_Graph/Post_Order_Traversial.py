@@ -21,7 +21,7 @@ def postOrderTraversial(root):
                 buffer.push(node)
                 parent = node
                 node = node.leftChild
-                
+
             if(parent.rightChild == None):
                 arraylist.append(parent.key)
                 parent.visited = True
