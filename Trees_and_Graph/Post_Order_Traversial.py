@@ -9,17 +9,37 @@ def postOrderTraversial(root):
     node = root
     buffer.push(node)
     node = node.leftChild
-    while(node.leftChild != None):
+    while(node != None):
         buffer.push(node)
         node = node.leftChild
-    arraylist.append(node.key)
-    buffer.push(node)
+
     while(buffer.isEmpty() is False):
-        node = buffer.pop()
-        #arraylist.append(node.key)
-        if(node.rightChild != None):
-            node = node.rightChild
-        while(node != None):
-            buffer.push(node)
-            node = node.leftChild
-            
+        node = buffer.peek()
+        if(node.rightChild != None and node.rightChild.visited is False): # We have to set a visited flag that make the
+            node = node.rightChild                                        # nodes will not visit multiple times.
+            while(node != None):
+                buffer.push(node)
+                parent = node
+                node = node.leftChild
+                
+            if(parent.rightChild == None):
+                arraylist.append(parent.key)
+                parent.visited = True
+                buffer.pop()
+        else:
+            node.visited = True                                          # Set visited flags
+            arraylist.append(node.key)
+            buffer.pop()
+    return arraylist
+
+#Testing part...
+TreeRoot = BinarySearchTree()
+Treelist = [10,5,3,4,7,6,8,11,12,9]
+
+for i in Treelist:
+    TreeRoot.insertion(i)
+
+TreeRoot.root.printSubtree(5)
+
+result = postOrderTraversial(TreeRoot.root)
+print result

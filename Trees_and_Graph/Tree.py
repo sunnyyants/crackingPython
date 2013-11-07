@@ -8,6 +8,7 @@ class TreeNode:
         self.leftChild = None
         self.rightChild = None
         self.state = None
+        self.visited = False
 
     def getKey(self):
         return self.key
