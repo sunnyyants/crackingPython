@@ -17,9 +17,9 @@ def miniHeightBST(item, start, end):
 
 # Testing part...
 
-list = [1,2,3,4,5,6,7,8,9,10]
+#list = [1,2,3,4,5,6,7,8,9,10]
 
 
-root = miniHeightBST(list,0,len(list) - 1)
+#root = miniHeightBST(list,0,len(list) - 1)
 
-root.printSubtree(5)
+#root.printSubtree(5)

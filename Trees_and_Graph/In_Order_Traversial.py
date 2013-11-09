@@ -7,23 +7,33 @@ def inOrderTraversial(root):
     arraylist = []
     buffer = Stack()
     node = root
-    buffer.push(node)
-    node = node.leftChild
-    while(node != None):
-        buffer.push(node)
-        node = node.leftChild
-
-    while(buffer.isEmpty() is False):
-        node = buffer.pop()
-        arraylist.append(node.key)
-        if(node.rightChild != None):
+#    buffer.push(node)
+#    node = node.leftChild
+#    while(node != None):
+#        buffer.push(node)
+#        node = node.leftChild
+#
+#    while(buffer.isEmpty() is False):
+#        node = buffer.pop()
+#        arraylist.append(node.key)
+#        if(node.rightChild != None):
+#            node = node.rightChild
+#            while(node != None):
+#                buffer.push(node)
+#               node = node.leftChild
+#
+#    return arraylist
+#
+    while (buffer.isEmpty() is False or node != None):
+        if (node != None):
+            buffer.push(node)
+            node = node.leftChild
+        else:
+            node = buffer.pop()
+            arraylist.append(node.key)
             node = node.rightChild
-            while(node != None):
-                buffer.push(node)
-                node = node.leftChild
 
     return arraylist
-
 
 # Testing part...
 TreeRoot = BinarySearchTree()

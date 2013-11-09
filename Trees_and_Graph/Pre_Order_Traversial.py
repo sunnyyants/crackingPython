@@ -6,23 +6,33 @@ def preOrderTraversial(root):
     arraylist = []
     buffer = Stack()
     node = root
-    arraylist.append(node.key)
+#    arraylist.append(node.key)
     buffer.push(node)
-    node = node.leftChild
-    while(node != None):
-        buffer.push(node)
+#    node = node.leftChild
+#    while(node != None):
+#        buffer.push(node)
+#        arraylist.append(node.key)
+#        node = node.leftChild
+
+#    while(buffer.size != 0):
+#        node = buffer.pop()
+#        if(node.rightChild != None):
+#            node = node.rightChild
+#            while(node != None):
+#                buffer.push(node)
+#                arraylist.append(node.key)
+#               node = node.leftChild
+
+    while (buffer.size != 0):
+        node = buffer.peek()
         arraylist.append(node.key)
-        node = node.leftChild
+        buffer.pop()
+        if (node.rightChild != None):
+            buffer.push(node.rightChild)
 
-    while(buffer.size != 0):
-        node = buffer.pop()
-        if(node.rightChild != None):
-            node = node.rightChild
-            while(node != None):
-                buffer.push(node)
-                arraylist.append(node.key)
-                node = node.leftChild
-
+        if (node.leftChild != None):
+            buffer.push(node.leftChild)
+    return arraylist
 
     return arraylist
 
