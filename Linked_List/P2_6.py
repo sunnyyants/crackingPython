@@ -7,16 +7,17 @@ from Linked_List.SingleLinkedList import SLinkedList
 
 
 def findtheLoopStart(list):
-    slow = list.head.next
-    fast = list.head.next.next
+    slow = list.head
+    fast = list.head
 
-    while(slow != fast):
+    while(True):
+        if(fast is None and fast.next is None):
+            return None
+            # There is any loop in the linked list
         slow = slow.next
         fast = fast.next.next
+        if(fast == slow): break
 
-    # There is any loop in the linked list
-    if(slow == None or fast == None):
-        return None
 
     # Find out the start point of the loop linked list from the meet point.
     slow = list.head
