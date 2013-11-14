@@ -35,6 +35,21 @@ def isFree(x,y,restrict):
     else:
         return True
 
+def findpaths(x,y):
+    if(x == 0 or y == 0):
+        return 0
+    dp = [0] * y
+    dp[0] = 1
+    for i in range(0,x):
+        for j in range(1,y):
+            if(i == 0):
+                dp[j] = 1
+            else:
+                dp[j] = dp[j-1] + dp[j]
+
+    return dp[y-1]
+
+
 # Testing Part...
 
 print "Generated a 4*3 grid and set grid[0][1] gird[2][2] as off-limit"
@@ -54,3 +69,5 @@ for i in list:
     print "| y: " + str(i.y) + "]"
 
 print "Total " +str(len(list)) + " steps"
+
+print findpaths(2,2)
