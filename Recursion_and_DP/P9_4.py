@@ -21,8 +21,6 @@ def converIntToSet(x,set):
 
     return subset
 
-
-
 # testing part...
 set = [1,2,3]
 allsubset = getsubsets(set)
