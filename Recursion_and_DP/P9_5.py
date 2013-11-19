@@ -40,8 +40,10 @@ def permute2(s):
     return res
 
 # Testing Part...
+print "All the permutation of set 'abc' will be showing as below:"
 list = permutation("abc")
 print list
-print permute2("abc")
+print "All the permutation of set 'abcd' will be showing as below:"
+print permute2("abcd")
 
 
